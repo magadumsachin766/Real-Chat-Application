@@ -14,7 +14,7 @@ const defaultData = {
   email: "",
   password: ""
 }
-function Regsiter() {
+function Register() {
   const [formData, setFormData] = useState(defaultData)
   const [isLoading, setIsLoading] = useState(false)
   const [showPass, setShowPass] = useState(false)
@@ -117,4 +117,4 @@ function Regsiter() {
   )
 }
 
-export default Regsiter
+export default Register
