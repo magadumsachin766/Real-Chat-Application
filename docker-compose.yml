@@ -3,11 +3,13 @@ services:
   backend:
     build:
       context: ./server
+      #Build the backend image using the Dockerfile inside the server folder.
     container_name: chat-backend
     ports:
       - "8000:8000"
     env_file:
       - ./server/.env
+      #Take the environment variables from server/.env and give them to the backend container.
     networks:
       - chat-network
 

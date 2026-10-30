@@ -17,10 +17,13 @@ ENV REACT_APP_CLIENT_ID=$REACT_APP_CLIENT_ID
 RUN npm run build
 
 
-FROM nginx:alpine
+FROM nginx:alpine 
+# Use the Nginx Alpine Linux image as the base image
 
 COPY --from=build /app/build /usr/share/nginx/html
 
 EXPOSE 80
+#This container is intended to listen on port 80."
 
 CMD ["nginx", "-g", "daemon off;"]
+#When the container starts, run this command.
