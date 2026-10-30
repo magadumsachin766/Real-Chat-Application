@@ -29,10 +29,15 @@ mongoDBConnect();
 const server = app.listen(PORT, () => {
   console.log(`Server Listening at PORT - ${PORT}`);
 });
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://real-chat-application-mwxt-6sojejjwi-chat-application1.vercel.app"
+];
 const io = new Server.Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: 'http://localhost:3000',
+    origin: allowedOrigins,
+    credentials: true
   },
 });
 io.on('connection', (socket) => {
