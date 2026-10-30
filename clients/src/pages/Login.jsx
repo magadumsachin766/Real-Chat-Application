@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
+//import { useEffect } from 'react'
 import { GoogleLogin } from '@react-oauth/google';
 import {jwtDecode} from "jwt-decode";
 import { googleAuth } from '../apis/auth'
@@ -8,7 +8,7 @@ import { loginUser } from '../apis/auth'
 import { Link, useNavigate } from 'react-router-dom'
 import { BsEmojiLaughing, BsEmojiExpressionless } from "react-icons/bs"
 import { toast } from 'react-toastify';
-import { validUser } from '../apis/auth'
+//import { validUser } from '../apis/auth'
 const defaultData = {
   email: "",
 
@@ -42,9 +42,9 @@ function Login() {
   }
 };
   console.log("CLIENT ID:", process.env.REACT_APP_CLIENT_ID);
-  const googleFailure = (error) => {
-    // toast.error("Something went Wrong.Try Again!")
-  }
+  // const googleFailure = (error) => {
+  //   // toast.error("Something went Wrong.Try Again!")
+  // }
   const handleOnChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }

@@ -2,12 +2,12 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { GoogleLogin } from "@react-oauth/google";
 
-import { useEffect } from 'react'
+//import { useEffect } from 'react'
 import { googleAuth, registerUser } from '../apis/auth'
 import { useState } from 'react'
 import { BsEmojiLaughing, BsEmojiExpressionless } from "react-icons/bs"
 import { toast } from 'react-toastify';
-import { validUser } from '../apis/auth'
+//import { validUser } from '../apis/auth'
 const defaultData = {
   firstname: "",
   lastname: "",
